@@ -17,7 +17,8 @@ package com.example.android.miwok;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -42,16 +43,19 @@ public class NumbersActivity extends AppCompatActivity {
 
 
 
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
+        ListView  ListView = ( ListView) findViewById(R.id.list);
 
-        Log.v("NumbersActivity","words at index 0:" + words.get(1));
-        Log.v("NumbersActivity","words at index 1:" + words.get(2));
-        Log.v("NumbersActivity","words at index 2:" + words.get(3));
-        Log.v("NumbersActivity","words at index 3:" + words.get(4));
-        Log.v("NumbersActivity","words at index 4:" + words.get(5));
-        Log.v("NumbersActivity","words at index 5:" + words.get(6));
-        Log.v("NumbersActivity","words at index 6:" + words.get(7));
-        Log.v("NumbersActivity","words at index 7:" + words.get(8));
+        ListView.setAdapter(itemsAdapter);
+
+}     //   Log.v("NumbersActivity","words at index 0:" + words.get(1));
+       // Log.v("NumbersActivity","words at index 1:" + words.get(2));
+        //Log.v("NumbersActivity","words at index 2:" + words.get(3));
+        //Log.v("NumbersActivity","words at index 3:" + words.get(4));
+       // Log.v("NumbersActivity","words at index 4:" + words.get(5));
+       // Log.v("NumbersActivity","words at index 5:" + words.get(6));
+       // Log.v("NumbersActivity","words at index 6:" + words.get(7));
+       // Log.v("NumbersActivity","words at index 7:" + words.get(8));
     }
-}
 
 
